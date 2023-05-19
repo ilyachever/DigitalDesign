@@ -1,15 +1,17 @@
 .button {
     $base-width: 100px;
     $base-height: 40px;
+    $base-padding: 10px;
     $base-radius: 8px;
 
     position: relative;
 
     min-width: $base-width;
-    height: $base-height;
-    padding: 0 10px;
+    min-height: $base-height;
+    padding: $base-padding;
 
     @include flex-all-c;
+    gap: 5px;
 
     border: none;
     border-radius: $base-radius;
