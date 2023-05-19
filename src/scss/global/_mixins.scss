@@ -1,0 +1,65 @@
+// Flex
+@mixin flex-b-c {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-s-c {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@mixin flex-all-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-e-c {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+// Resets
+
+@mixin reset-list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+@mixin reset-link {
+  text-decoration: none;
+}
+
+@mixin reset-input {
+  font-family: inherit;
+}
+
+@mixin reset-fieldset {
+  padding: 0;
+  border: none;
+}
+
+// Fonts
+@mixin title-font {
+  $base-f-s: 40px;
+  $base-f-w: 500;
+  $base-l-h: 50px;
+
+  font-size: $base-f-s;
+  font-weight: $base-f-w;
+  line-height: $base-l-h;
+}
+
+
+// Media
+@mixin media($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}

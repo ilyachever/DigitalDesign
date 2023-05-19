@@ -1,0 +1,25 @@
+{
+  "icons": [
+    {
+      "src": "images/favicons/apple-76.png",
+      "type": "image/png",
+      "sizes": "76x76"
+    },
+    {
+      "src": "images/favicons/apple-120.png",
+      "type": "image/png",
+      "sizes": "120x120"
+    },
+    {
+      "src": "images/favicons/apple-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "images/favicons/apple-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
+

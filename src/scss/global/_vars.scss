@@ -1,0 +1,32 @@
+:root {
+  // Content Width
+  --content-width: 1440px;
+
+  // Offsets
+  --content-offset: 15px;
+
+  // Containers
+  --container: calc(var(--wide-content-width) + (var(--content-offset) * 2));
+
+  // Media queries
+  --mobile: 320px;
+  --tablet: 767px;
+  --desktop: 1280px;
+
+  // Ui Colors
+  --black: #000000;
+  --white: #ffffff;
+
+  // Theme Colors
+  --base-theme-background: #959095;
+  --base-theme-text: #393646;
+  --dark-theme-background: #2b2931;
+  --dark-theme-text: #e2dbcb;
+
+  // Fonts
+  --main-f-f: "Muller", "Arial", sans-serif;
+  --main-f-s: 16px;
+  --main-f-w: 400;
+  --main-l-h: 24px;
+  --main-f-c: var(--base-theme-text);
+}
