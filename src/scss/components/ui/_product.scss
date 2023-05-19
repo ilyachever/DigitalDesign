@@ -1,0 +1,23 @@
+.product {
+    display: grid;
+    gap: 10px 0;
+    justify-content: center;
+
+    &__figure {
+       margin: 0; 
+
+       display: grid;
+       gap: 10px 0;
+       justify-items: center;
+    }
+
+    &__title {
+        margin: 0;
+        
+        text-align: center;
+    }
+
+    &__date {
+        text-align: center;
+    }
+}
