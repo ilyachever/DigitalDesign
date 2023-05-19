@@ -1,0 +1,32 @@
+.ui-button {
+    $base-width: 40px;
+    $base-height: 40px;
+    $base-radius: 8px;
+
+    position: relative;
+
+    width: $base-width;
+    height: $base-height;
+    padding: 0;
+
+    @include flex-all-c;
+
+    border: 1px solid var(--abbey);
+    border-radius: $base-radius;
+    box-shadow: 1px 1px 2px 0 var(--abbey);
+
+    background-color: var(--tuna);
+
+    cursor: pointer;
+
+    &:focus {
+        outline: 2px solid var(--abbey);
+    }
+
+    &:active {
+        left: 1px;
+        top: 1px;
+        border: none;
+        box-shadow: 0 0 0 0 var(--abbey);
+    }
+}
