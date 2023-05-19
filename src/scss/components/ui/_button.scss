@@ -1,0 +1,42 @@
+.button {
+    $base-width: 100px;
+    $base-height: 40px;
+    $base-radius: 8px;
+
+    position: relative;
+
+    min-width: $base-width;
+    height: $base-height;
+    padding: 0 10px;
+
+    @include flex-all-c;
+
+    border: none;
+    border-radius: $base-radius;
+    box-shadow: 1px 1px 2px 0 var(--abbey);
+
+    cursor: pointer;
+
+    &:active {
+        left: 1px;
+        top: 1px;
+        border: none;
+        box-shadow: 0 0 0 0 var(--abbey);
+    }
+
+    &--buy {
+        background-color: var(--highland);
+
+        &:focus-visible {
+            outline: 2px solid var(--highland-active);
+        }
+    }
+
+    &--close {
+        background-color: var(--muddy);
+
+        &:focus-visible {
+            outline: 2px solid var(--muddy-active);
+        }
+    }
+}
