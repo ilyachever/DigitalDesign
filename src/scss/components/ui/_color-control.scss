@@ -1,0 +1,82 @@
+body {
+    display: flex;
+    gap: 25px;
+}
+
+.color-control {
+    display: grid;
+    justify-items: center;
+
+    &__label {
+        order: 1;
+
+        text-align: center;
+
+        cursor: pointer;
+    }
+    
+    &__input:checked + &__mark::after {
+        opacity: 1;
+    }
+
+    &__input:focus-visible + &__mark {
+        outline: 2px solid var(--abbey);
+    }
+
+    &__mark {
+        $base-width: 30px;
+        $base-height: 30px;
+        $base-radius: 50%;
+
+        position: relative;
+
+        display: block;
+        width: $base-width;
+        height: $base-height;
+
+        border-radius: $base-radius;
+
+        background-color: var(--tuna);
+
+        &--black {
+            &::after {
+                background-color: var(--black);
+            }
+        }
+
+        &--white {
+            &::after {
+                background-color: var(--white);
+            }
+        }
+
+        &--blue {
+            &::after {
+                background-color: var(--gigas);
+            }
+        }
+
+        &::after {
+            $base-width: 15px;
+            $base-height: 15px;
+            $base-radius: 50%;
+
+            content: "";
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            display: block;
+            width: $base-width;
+            height: $base-height;
+
+            border-radius: $base-radius;
+
+            opacity: 0;
+
+            transition: opacity 0.15s ease-out;
+        }
+    }
+}
