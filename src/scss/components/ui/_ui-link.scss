@@ -1,9 +1,11 @@
 .ui-link {
+    $base-padding: 10px;
     $base-color: var(--base-theme-text);
 
     position: relative;
 
     display: block;
+    padding: $base-padding 0;
 
     @include reset-link;
 
