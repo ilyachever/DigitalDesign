@@ -1,8 +1,10 @@
 .header {
     $base-bg-color: var(--base-theme-ui);
+    $base-box-shadow: 1px 1px 2px 0 var(--abbey);
 
     background-color: $base-bg-color;
-
+    box-shadow: $base-box-shadow;
+    
     &__content {
         $base-padding: 10px;
 
