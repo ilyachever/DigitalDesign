@@ -1,0 +1,21 @@
+.nav {
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 30px;
+
+        @include reset-list;
+    }
+
+    &__link {
+        $base-color: var(--base-theme-text);
+        $base-f-s: 20px;
+
+        color: $base-color;
+        font-size: $base-f-s;
+        font-weight: 600;
+
+        @include reset-link;
+    }
+}
