@@ -1,0 +1,40 @@
+.main {
+    &__content {
+        $base-padding: 40px;
+
+        padding-top: $base-padding;
+        padding-bottom: $base-padding;
+    }
+
+    &__title {
+        $base-margin: 25px;
+        $base-color: var(--base-theme-text);
+
+        margin-top: 0;
+        margin-bottom: $base-margin;
+
+        color: $base-color;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+
+        @include reset-list;
+    }
+
+    &__item {
+        $base-bg-color: var(--base-theme-ui);
+        $base-radius: 8px;
+        $base-padding: 15px;
+        $base-box-shadow: 1px 1px 2px 0 var(--abbey);
+
+        padding-top: $base-padding;
+        
+        border-radius: $base-radius;
+        
+        background-color: $base-bg-color;
+        box-shadow: $base-box-shadow;
+    }
+}
