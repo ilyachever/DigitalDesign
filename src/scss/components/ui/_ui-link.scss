@@ -1,0 +1,36 @@
+.ui-link {
+    $base-color: var(--base-theme-text);
+
+    position: relative;
+
+    @include reset-link;
+
+    color: $base-color;
+
+    &::after {
+        content: "";
+
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        display: block;
+        height: 1px;
+        width: 0;
+
+        background-color: var(--base-theme-text);
+
+        transition: width 0.2s ease-in-out;
+    }
+
+    &:hover {
+        &::after {
+            width: 100%;
+        }
+    }
+
+    &:focus-visible {
+        outline: 1px solid var(--abbey);
+    }
+}
