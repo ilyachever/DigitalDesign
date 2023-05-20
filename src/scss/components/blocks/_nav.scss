@@ -9,13 +9,12 @@
     }
 
     &__link {
-        $base-color: var(--base-theme-text);
+        $base-padding: 10px;
         $base-f-s: 20px;
 
-        color: $base-color;
+        padding: $base-padding 0;
+
         font-size: $base-f-s;
         font-weight: 600;
-
-        @include reset-link;
     }
 }
