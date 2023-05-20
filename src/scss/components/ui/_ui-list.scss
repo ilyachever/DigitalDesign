@@ -1,0 +1,18 @@
+.ui-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+
+    @include reset-list;
+
+    &__link {
+        $base-padding: 10px;
+        $base-f-s: 20px;
+        
+        padding: $base-padding 0;
+
+        font-size: $base-f-s;
+        font-weight: 600;
+    }
+}
