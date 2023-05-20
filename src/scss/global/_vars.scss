@@ -3,10 +3,10 @@
   --content-width: 1440px;
 
   // Offsets
-  --content-offset: 15px;
+  --content-offset: 20px;
 
   // Containers
-  --container: calc(var(--wide-content-width) + (var(--content-offset) * 2));
+  --container: calc(var(--content-width) + (var(--content-offset) * 2));
 
   // Media queries
   --mobile: 320px;
