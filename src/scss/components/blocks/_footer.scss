@@ -1,0 +1,16 @@
+.footer {
+    $base-bg-color: var(--base-theme-ui);
+    
+    background-color: $base-bg-color;
+    
+    &__content {
+        $base-padding: 10px;
+
+        padding-top: $base-padding;
+        padding-bottom: $base-padding;
+    }
+
+    &__list {
+        justify-content: space-evenly;
+    }
+}
