@@ -3,6 +3,8 @@
 
     position: relative;
 
+    display: block;
+
     @include reset-link;
 
     color: $base-color;
