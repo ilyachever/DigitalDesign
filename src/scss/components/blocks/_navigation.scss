@@ -6,8 +6,7 @@
         padding: 25px 0;
 
         @include media($tablet) {
-            flex-flow: initial;
-            justify-content: center;
+            flex-flow: row wrap;
             padding: 0;
         }
     }
