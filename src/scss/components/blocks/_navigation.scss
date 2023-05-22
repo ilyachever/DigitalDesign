@@ -1,0 +1,23 @@
+.navigation {
+    background-color: var(--base-theme-ui);
+
+    &__list {
+        flex-flow: column nowrap;
+        padding: 25px 0;
+
+        @include media($tablet) {
+            flex-flow: initial;
+            justify-content: center;
+            padding: 0;
+        }
+    }
+
+    &__link {
+        font-size: 18px;
+        font-weight: 400;
+
+        @include media($tablet) {
+            font-size: 20px;
+        }
+    }
+}
