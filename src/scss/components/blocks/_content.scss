@@ -1,10 +1,9 @@
-.main {
-    &__content {
-        $base-padding: 40px;
+.content {
+    $base-padding: 40px;
 
-        padding-top: $base-padding;
-        padding-bottom: $base-padding;
-    }
+    height: 100%;
+    padding-top: $base-padding;
+    padding-bottom: $base-padding;
 
     &__title {
         $base-margin: 25px;
@@ -31,9 +30,9 @@
         $base-box-shadow: 1px 1px 2px 0 var(--abbey);
 
         padding-top: $base-padding;
-        
+
         border-radius: $base-radius;
-        
+
         background-color: $base-bg-color;
         box-shadow: $base-box-shadow;
     }
