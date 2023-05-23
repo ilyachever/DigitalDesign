@@ -2,7 +2,7 @@
 const nav = document.querySelector('.header__navigation');
 
 // Если JS не загрузится, навигация будет доступна благодаря модификатору класса "--nojs"
-function isJsLoaded() {
+function hideNavigation() {
     nav.classList.remove('header__navigation--nojs');
 }
 
@@ -32,6 +32,6 @@ function changeIcon(parentElement, attribute) {
 }
 
 export {
-    isJsLoaded,
+    hideNavigation,
     handlerClick
 }
