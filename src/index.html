@@ -10,7 +10,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="./images/favicons/apple-180.png">
   <link rel="manifest" href="./manifest.webmanifest">
-  <link rel="preload" href="./fonts/font.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/MullerRegular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/styles.css">
   <script defer src="./scripts/index.js"></script>
@@ -33,19 +33,19 @@
       <nav class="header__navigation header__navigation--nojs navigation">
         <ul class="navigation__list ui-list">
           <li>
-            <a class="navigation__link ui-link" href="">Экзотические</a>
+            <a class="navigation__link ui-link" data-category="exotic" href="./exotic.html">Экзотические</a>
           </li>
           <li>
-            <a class="navigation__link ui-link" href="">Дикие</a>
+            <a class="navigation__link ui-link" data-category="wild" href="./wild.html">Дикие</a>
           </li>
           <li>
-            <a class="navigation__link ui-link" href="">Домашние</a>
+            <a class="navigation__link ui-link" data-category="pet" href="./pet.html">Домашние</a>
           </li>
         </ul>
       </nav>
 
       <!-- Theme switcher -->
-      <button class="ui-button" type="button" aria-label="Сменить тему сайта.">
+      <button class="ui-button" type="button" data-theme="base" aria-label="Сменить тему сайта.">
         <svg width="25" height="25" aria-hidden="true" focusable="false">
           <use href="./images/sprite/sprite.svg#dark"></use>
         </svg>
@@ -68,13 +68,13 @@
 
       <ul class="footer__list ui-list">
         <li>
-          <a class="ui-list__link ui-link" href="">Экзотические</a>
+          <a class="ui-list__link ui-link" data-category="exotic" href="./exotic.html">Экзотические</a>
         </li>
         <li>
-          <a class="ui-list__link ui-link" href="">Дикие</a>
+          <a class="ui-list__link ui-link" data-category="wild" href="./wild.html">Дикие</a>
         </li>
         <li>
-          <a class="ui-list__link ui-link" href="">Домашние</a>
+          <a class="ui-list__link ui-link" data-category="pet" href="./pet.html">Домашние</a>
         </li>
       </ul>
 
