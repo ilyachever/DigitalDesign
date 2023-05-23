@@ -2,7 +2,7 @@
     display: grid;
     gap: 10px 0;
 
-    color: (--base-theme-text);
+    color: var(--base-theme-text);
 
     &__figure {
        margin: 0; 
