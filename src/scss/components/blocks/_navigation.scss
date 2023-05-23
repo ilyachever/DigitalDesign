@@ -3,7 +3,7 @@
 
     &__list {
         flex-flow: column nowrap;
-        padding: 25px 0;
+        padding: 25px;
 
         @include media($tablet) {
             flex-flow: row wrap;
