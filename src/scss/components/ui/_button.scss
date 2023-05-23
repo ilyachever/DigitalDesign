@@ -3,6 +3,7 @@
     $base-height: 40px;
     $base-padding: 10px;
     $base-radius: 8px;
+    $base-f-s: 18px;
 
     position: relative;
 
@@ -16,6 +17,8 @@
     border: none;
     border-radius: $base-radius;
     box-shadow: 1px 1px 2px 0 var(--abbey);
+
+    font-size: $base-f-s;
 
     cursor: pointer;
 
