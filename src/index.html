@@ -72,6 +72,88 @@
         </svg>
       </button>
 
+      <!-- Offer Modal -->
+      <div class="modal modal--hidden">
+        <form class="form" action="#" method="POST">
+
+          <!-- Amount -->
+          <fieldset class="form__fieldset amount-control">
+            <legend class="form__legend">Выберите количество</legend>
+            <!-- Less Button -->
+            <button class="amount-control__less ui-button" type="button" aria-label="Убавить количество.">
+              <svg width="25" height="25" aria-hidden="true" focusable="false">
+                <use href="./images/sprite/sprite.svg#down"></use>
+              </svg>
+            </button>
+
+            <!-- Input Amount -->
+            <input class="amount-control__input" type="number" min="0" placeholder="0" required>
+
+            <!-- More button -->
+            <button class="amount-control__more ui-button" type="button" aria-label="Прибавить количество.">
+              <svg width="25" height="25" aria-hidden="true" focusable="false">
+                <use href="./images/sprite/sprite.svg#up"></use>
+              </svg>
+            </button>
+
+          </fieldset>
+
+          <!-- Colors -->
+          <fieldset class="form__fieldset form__color">
+            <legend class="form__legend">Выберите цвет</legend>
+            <!-- Black control -->
+            <div class="color-control">
+              <label class="color-control__label" for="black">Чёрный цвет</label>
+              <input class="color-control__input visually-hidden" type="radio" id="black" name="product_color"
+                value="black">
+              <span class="color-control__mark color-control__mark--black"></span>
+            </div>
+
+            <!-- White control -->
+            <div class="color-control">
+              <label class="color-control__label" for="white">Белый цвет</label>
+              <input class="color-control__input visually-hidden" type="radio" id="white" name="product_color"
+                value="white">
+              <span class="color-control__mark color-control__mark--white"></span>
+            </div>
+
+            <!-- Blue control -->
+            <div class="color-control">
+              <label class="color-control__label" for="blue">Синий цвет</label>
+              <input class="color-control__input visually-hidden" type="radio" id="blue" name="product_color"
+                value="blue">
+              <span class="color-control__mark color-control__mark--blue"></span>
+            </div>
+
+          </fieldset>
+
+          <!-- Comment -->
+          <textarea class="form__comment" name="comment" cols="30" rows="6"></textarea>
+
+          <!-- Controls -->
+          <div class="form__controls">
+
+            <!-- Submit button -->
+            <button class="button button--buy" type="submit">
+              Оформить
+              <svg width="25" height="25" aria-hidden="true" focusable="false">
+                <use href="./images/sprite/sprite.svg#cart"></use>
+              </svg>
+            </button>
+
+            <!-- Close button -->
+            <button class="button button--close" type="submit">
+              Закрыть
+              <svg width="25" height="25" aria-hidden="true" focusable="false">
+                <use href="./images/sprite/sprite.svg#close"></use>
+              </svg>
+            </button>
+
+          </div>
+
+        </form>
+      </div>
+
     </section>
   </main>
 
