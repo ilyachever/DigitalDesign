@@ -1,7 +1,8 @@
 .content {
-    height: 100%;
+    position: relative;
+
     padding-top: 85px;
-    padding-bottom: 40px;
+    padding-bottom: 70px;
 
     &__title {
         $base-margin: 25px;
@@ -45,5 +46,22 @@
 
         background-color: $base-bg-color;
         box-shadow: $base-box-shadow;
+    }
+
+    &__button {
+        position: absolute;
+        bottom: 15px;
+        right: 20px;
+
+        &--hidden {
+            display: none;
+        }
+
+        &:active {
+            left: initial;
+            top: initial;
+            right: 19px;
+            bottom: 14px;
+        }
     }
 }
