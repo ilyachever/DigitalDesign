@@ -1,8 +1,8 @@
 .footer {
     $base-bg-color: var(--base-theme-ui);
-    
+
     background-color: $base-bg-color;
-    
+
     &__content {
         $base-padding: 10px;
 
@@ -11,6 +11,11 @@
     }
 
     &__list {
+        flex-direction: column;
         justify-content: space-evenly;
+
+        @include media($wide-mobile) {
+            flex-direction: initial;
+        }
     }
 }
