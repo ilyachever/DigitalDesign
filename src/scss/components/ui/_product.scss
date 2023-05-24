@@ -1,6 +1,9 @@
 .product {
     display: grid;
+    align-content: space-between;
     gap: 10px 0;
+
+    min-height: 100%;
 
     color: var(--base-theme-text);
 
