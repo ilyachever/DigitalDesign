@@ -1,13 +1,16 @@
-import { hideNavigation, handlerClick } from './menu.js'
+import { hideNavigation, handlerClick } from './menu.js';
 import { changeTheme, getPreviousTheme } from './theme.js';
-import { data } from './server.js'
+import { checkPageOffset, scrollToTop } from './scroll.js';
+import { data } from './server.js';
 import { view } from "./view.js";
-import { controller } from './controller.js'
+import { controller } from './controller.js';
 
 // HTML Элементы
-const button = document.querySelector('.header__menu');
+const menuButton = document.querySelector('.header__menu');
 
-const buttonTheme = document.querySelector('.ui-button[data-theme]');
+const themeButton = document.querySelector('.ui-button[data-theme]');
+
+const scrollButton = document.querySelector('.content__button');
 
 const contentContainer = document.querySelector('.content__list');
 const contentTitle = document.querySelector('.content__title');
@@ -15,7 +18,7 @@ const navigationLinks = Array.from(document.querySelectorAll('.ui-link[data-cate
 
 // Инитиализация загрузки скрипта
 hideNavigation();
-getPreviousTheme(buttonTheme);
+getPreviousTheme(themeButton);
 
 if (localStorage.getItem('data') !== null) {
     controller.getLocalStorage(contentTitle, contentContainer);
@@ -25,10 +28,14 @@ if (localStorage.getItem('data') !== null) {
 }
 
 // Меню
-button.addEventListener('click', handlerClick);
+menuButton.addEventListener('click', handlerClick);
 
 // Смена темы
-buttonTheme.addEventListener('click', changeTheme)
+themeButton.addEventListener('click', changeTheme);
+
+// Скролл
+window.addEventListener('scroll', () => checkPageOffset(scrollButton));
+scrollButton.addEventListener('click', scrollToTop);
 
 // Контент
 for (let i = 0; i < navigationLinks.length; i++) {
