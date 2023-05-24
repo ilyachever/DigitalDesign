@@ -13,20 +13,20 @@
 
     border: 1px solid var(--abbey);
     border-radius: $base-radius;
-    box-shadow: 1px 1px 2px 0 var(--abbey);
+    box-shadow: 1px 1px 2px 0 var(--base-theme-text);
 
     background-color: var(--tuna);
 
     cursor: pointer;
 
     &:focus-visible {
-        outline: 2px solid var(--abbey);
+        outline: 2px solid var(--base-theme-text);
     }
 
     &:active {
         left: 1px;
         top: 1px;
         border: none;
-        box-shadow: 0 0 0 0 var(--abbey);
+        box-shadow: 0 0 0 0 var(--base-theme-text);
     }
 }
