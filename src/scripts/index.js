@@ -1,6 +1,6 @@
 import { hideNavigation, handlerClick } from './menu.js';
 import { changeTheme, getPreviousTheme } from './theme.js';
-import { checkPageOffset, scrollToTop } from './scroll.js';
+import { checkPageOffset } from './scroll.js';
 import { data } from './server.js';
 import { view } from "./view.js";
 import { controller } from './controller.js';
@@ -35,7 +35,6 @@ themeButton.addEventListener('click', changeTheme);
 
 // Скролл
 window.addEventListener('scroll', () => checkPageOffset(scrollButton));
-scrollButton.addEventListener('click', scrollToTop);
 
 // Контент
 for (let i = 0; i < navigationLinks.length; i++) {

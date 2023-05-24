@@ -2,8 +2,10 @@
 function checkPageOffset(element, quantity = 200) {
     if (window.pageYOffset > quantity) {
         element.classList.remove('content__button--hidden');
+        element.addEventListener('click', scrollToTop);
     } else {
         element.classList.add('content__button--hidden');
+        element.removeEventListener('click', scrollToTop)
     }
 }
 
@@ -14,5 +16,4 @@ function scrollToTop() {
 
 export {
     checkPageOffset,
-    scrollToTop
 }
