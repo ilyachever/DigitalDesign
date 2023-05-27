@@ -1,4 +1,4 @@
-import { hideNavigation, closeNavigation, handlerClick } from './menu.js';
+import { hideNavigation, handlerClick } from './menu.js';
 import { changeTheme, getPreviousTheme } from './theme.js';
 import { checkPageOffset } from './scroll.js';
 import './order.js';
@@ -44,10 +44,7 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
     link.addEventListener('click', (evt) => {
         evt.preventDefault();
-
-        if (nav.classList.contains('header__navigation--opened')) {
-            closeNavigation();
-        }
+        handlerClick();
 
         const linkTitle = evt.target.textContent;
 
