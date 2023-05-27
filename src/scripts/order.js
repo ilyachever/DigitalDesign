@@ -19,22 +19,17 @@ contentContainer.addEventListener('click', (evt) => {
         reduceButton.addEventListener('click', reduceValue);
         amountControl.addEventListener('input', handlerValue);
         commentField.addEventListener('keyup', handlerCounter);
-        form.addEventListener('submit', (evt) => {
+        form.onsubmit = (evt) => {
             evt.preventDefault();
             arrangeProduct(title);
-            closeModal();
-            setDefaultValues();
-            resetListeners();
-        }, { once: true });
-        closeButton.addEventListener('click', () => {
-            closeModal();
-            setDefaultValues();
-            resetListeners();
-        }, { once: true });
-        document.addEventListener('keydown', closeModalByEsc);
+            handlerClose();
+        };
+        closeButton.addEventListener('click', handlerClose);
+        document.addEventListener('keydown', handlerCloseByEsc);
     }
 })
 
+// Добавляет значению инпута на +1, следит за кнопкой "Убавить".
 function addValue() {
     let currentValue = amountControl.value;
     const minValue = amountControl.getAttribute('min');
@@ -47,6 +42,7 @@ function addValue() {
     amountControl.value++;
 }
 
+// Убавляет значение инпута на -1, следит за минимальным значением.
 function reduceValue() {
     let currentValue = amountControl.value;
     const minValue = amountControl.getAttribute('min');
@@ -59,6 +55,7 @@ function reduceValue() {
     amountControl.value--;
 }
 
+// Следит за вводом значения в инпут, не давая записать знаечние меньше допустимого.
 function handlerValue() {
     let currentValue = amountControl.value;
     const minValue = amountControl.getAttribute('min');
@@ -73,13 +70,7 @@ function handlerValue() {
     }
 }
 
-function setDefaultValues() {
-    amountControl.value = amountControl.getAttribute('min');
-    document.querySelector('.color-control__input[value="black"]').checked = true;
-    commentField.value = '';
-    counterCurrent.textContent = '0';
-}
-
+// Следит за количеством вводимых в поле "Комментарий" символов.
 function handlerCounter() {
     let currentLength = commentField.value.length;
     const maxLength = commentField.getAttribute('maxLength');
@@ -93,6 +84,7 @@ function handlerCounter() {
     counterCurrent.textContent = currentLength;
 }
 
+// Заказывает выбранный продукт.
 function arrangeProduct(title = 'Птичка') {
     if (amountControl.value == 1) {
         alert(`Ваш новый друг ${title} уже летит к Вам!`);
@@ -101,27 +93,45 @@ function arrangeProduct(title = 'Птичка') {
     }
 }
 
+// Открывает доступ к форме.
 function openModal() {
     modal.classList.remove('modal--hidden');
 }
 
+// Закрывает доступ к форме.
 function closeModal() {
     modal.classList.add('modal--hidden');
 }
 
-function closeModalByEsc(evt) {
+// Закрывает доступ к форме по нажатию клавиши Escape.
+function handlerCloseByEsc(evt) {
     if (evt.key === 'Escape') {
-        modal.classList.add('modal--hidden');
-        setDefaultValues();
-        document.removeEventListener('keydown', closeModalByEsc);
+        handlerClose();
     }
 }
 
+// Следит за закрытием формы, устанавливя дефолтные значения, сбрасывая слушатели событий.
+function handlerClose() {
+    closeModal();
+    setDefaultValues();
+    resetListeners();
+}
+
+// Устанавливает все значения инпутов в начальное состояние.
+function setDefaultValues() {
+    amountControl.value = amountControl.getAttribute('min');
+    document.querySelector('.color-control__input[value="black"]').checked = true;
+    commentField.value = '';
+    counterCurrent.textContent = '0';
+}
+
+// Сбрасывает все слушатели событий.
 function resetListeners() {
     addButton.removeEventListener('click', addValue);
     reduceButton.removeEventListener('click', reduceValue)
     amountControl.removeEventListener('input', handlerValue);
     commentField.removeEventListener('keyup', handlerCounter);
-    document.removeEventListener('keydown', closeModalByEsc)
+    document.removeEventListener('keydown', handlerCloseByEsc);
+    closeButton.removeEventListener('click', handlerClose);
 }
 
