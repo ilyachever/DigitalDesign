@@ -9,8 +9,8 @@ const view = {
     getDate(time) {
         const dateComponents = time.split('.');
         const [dateDay, dateMonth, dateYear] = dateComponents;
-
-        const date = new Date(`${dateYear}.${dateMonth}.${dateDay}`);
+        
+        const date = new Date(`${dateYear}-${dateMonth}-${dateDay}`);
 
         const currentDay = date.getDay();
         const currentDayOfMonth = date.getDate();
