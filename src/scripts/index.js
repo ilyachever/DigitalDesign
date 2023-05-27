@@ -1,6 +1,6 @@
 import { hideNavigation, handlerClick } from './menu.js';
 import { changeTheme, getPreviousTheme } from './theme.js';
-import { checkPageOffset } from './scroll.js';
+import { checkPageOffset, scrollToTop } from './scroll.js';
 import './order.js';
 import { data } from './server.js';
 import { view } from "./view.js";
@@ -44,7 +44,9 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
     link.addEventListener('click', (evt) => {
         evt.preventDefault();
+        
         handlerClick();
+        scrollToTop();
 
         const linkTitle = evt.target.textContent;
 

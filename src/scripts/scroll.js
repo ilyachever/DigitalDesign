@@ -16,4 +16,5 @@ function scrollToTop() {
 
 export {
     checkPageOffset,
+    scrollToTop
 }
