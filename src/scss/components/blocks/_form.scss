@@ -32,6 +32,7 @@
     &__comment {
         display: block;
         width: 100%;
+        margin-bottom: 5px;
         padding: 10px;
 
         border: none;
@@ -43,6 +44,15 @@
         &:focus-visible {
             outline: 1px solid var(--base-theme-text);
             outline-offset: 1px;
+        }
+    }
+
+    &__counter {
+        color: var(--base-theme-text);
+        text-align: center;
+
+        &--invalid {
+            color: var(--muddy);
         }
     }
 
