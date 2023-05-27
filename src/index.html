@@ -73,14 +73,14 @@
       </button>
 
       <!-- Offer Modal -->
-      <div class="modal">
+      <div class="modal modal--hidden">
         <form class="form" action="#" method="POST">
 
           <!-- Amount -->
           <fieldset class="form__fieldset amount-control">
             <legend class="form__legend">Выберите количество</legend>
             <!-- Less Button -->
-            <button class="amount-control__less ui-button" type="button" aria-label="Убавить количество.">
+            <button class="amount-control__less ui-button ui-button--disabled" type="button" aria-label="Убавить количество." disabled>
               <svg width="25" height="25" aria-hidden="true" focusable="false">
                 <use href="./images/sprite/sprite.svg#down"></use>
               </svg>
@@ -132,7 +132,7 @@
             <legend class="form__legend">Оставьте комментарий</legend>
             <textarea class="form__comment" name="comment" cols="30" rows="6" maxlength="2000"></textarea>
             <small class="form__counter">Использовано символов:
-              <span class="form__counter-current">0</span>&nbsp;/&nbsp;<span class="form__counter-max"></span>
+              <span class="form__counter-current">0</span>&nbsp;/&nbsp;2000<span class="form__counter-max"></span>
             </small>
           </fieldset>
 

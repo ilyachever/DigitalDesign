@@ -1,6 +1,7 @@
 import { hideNavigation, handlerClick } from './menu.js';
 import { changeTheme, getPreviousTheme } from './theme.js';
 import { checkPageOffset } from './scroll.js';
+import './order.js';
 import { data } from './server.js';
 import { view } from "./view.js";
 import { controller } from './controller.js';
