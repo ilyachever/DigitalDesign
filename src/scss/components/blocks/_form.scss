@@ -2,6 +2,7 @@
     padding: 15px;
     
     display: grid;
+    grid-template-columns: 1fr;
     gap: 35px;
 
     border-radius: 8px;
@@ -10,15 +11,17 @@
 
     &__fieldset {
         margin: 0;
-        padding: 0;
 
         border-radius: 8px;
         border-color: var(--base-theme-text);
     }
 
     &__legend {
-        text-align: center;
         margin-bottom: 15px;
+        padding: 0 5px;
+
+        color: var(--base-theme-text);
+        text-align: center;
     }
 
     &__color {
@@ -27,11 +30,12 @@
     }
 
     &__comment {
+        display: block;
+        width: 100%;
         padding: 10px;
 
-        border-width: 2px;
+        border: none;
         border-radius: 8px;
-        border-color: var(--base-theme-text);
 
         font-size: 20px;
         color: var(--base-theme-text);
@@ -44,6 +48,7 @@
 
     &__controls {
         @include flex-all-c;
+        flex-wrap: wrap;
         gap: 15px;
     }
 }

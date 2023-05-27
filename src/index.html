@@ -73,7 +73,7 @@
       </button>
 
       <!-- Offer Modal -->
-      <div class="modal modal--hidden">
+      <div class="modal">
         <form class="form" action="#" method="POST">
 
           <!-- Amount -->
@@ -87,7 +87,7 @@
             </button>
 
             <!-- Input Amount -->
-            <input class="amount-control__input" type="number" min="0" placeholder="0" required>
+            <input class="amount-control__input" type="number" min="1" value="1" required>
 
             <!-- More button -->
             <button class="amount-control__more ui-button" type="button" aria-label="Прибавить количество.">
@@ -128,7 +128,10 @@
           </fieldset>
 
           <!-- Comment -->
-          <textarea class="form__comment" name="comment" cols="30" rows="6"></textarea>
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Оставьте комментарий</legend>
+            <textarea class="form__comment" name="comment" cols="30" rows="6" maxlength="2000"></textarea>
+          </fieldset>
 
           <!-- Controls -->
           <div class="form__controls">
@@ -142,7 +145,7 @@
             </button>
 
             <!-- Close button -->
-            <button class="button button--close" type="submit">
+            <button class="button button--close" type="button">
               Закрыть
               <svg width="25" height="25" aria-hidden="true" focusable="false">
                 <use href="./images/sprite/sprite.svg#close"></use>
