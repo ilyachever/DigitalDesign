@@ -1,4 +1,4 @@
-import { hideNavigation, handlerClick } from './menu.js';
+import { hideNavigation, openMenu, closeMenu } from './menu.js';
 import { changeTheme, getPreviousTheme } from './theme.js';
 import { checkPageOffset, scrollToTop } from './scroll.js';
 import './order.js';
@@ -30,7 +30,13 @@ if (localStorage.getItem('data') !== null) {
 }
 
 // Меню
-menuButton.addEventListener('click', handlerClick);
+menuButton.addEventListener('click', () => {
+    if (nav.classList.contains('header__navigation--opened')) {
+        closeMenu();
+    } else {
+        openMenu();
+    }
+});
 
 // Смена темы
 themeButton.addEventListener('click', changeTheme);
@@ -44,8 +50,8 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
     link.addEventListener('click', (evt) => {
         evt.preventDefault();
-        
-        handlerClick();
+
+        closeMenu();
         scrollToTop();
 
         const linkTitle = evt.target.textContent;
