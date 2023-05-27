@@ -98,7 +98,7 @@ const view = {
                 <figure class="product__figure">
                     <img src=${src} width="128" height="128" alt=${title}>
                     <figcaption>
-                    <h2 class="product__title">${title}</h2>
+                    <h3 class="product__title">${title}</h3>
                     </figcaption>
                 </figure>
                 <small class="product__date">${this.getDate(time)}</small>
