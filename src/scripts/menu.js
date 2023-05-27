@@ -31,7 +31,13 @@ function changeIcon(parentElement, attribute) {
     iconContainer.setAttribute('href', attribute)
 }
 
+// Функция закрытия навигации.
+function closeNavigation() {
+    nav.classList.remove('header__navigation--opened');
+}
+
 export {
     hideNavigation,
+    closeNavigation,
     handlerClick
 }

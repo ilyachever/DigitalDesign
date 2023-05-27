@@ -1,4 +1,4 @@
-import { hideNavigation, handlerClick } from './menu.js';
+import { hideNavigation, closeNavigation, handlerClick } from './menu.js';
 import { changeTheme, getPreviousTheme } from './theme.js';
 import { checkPageOffset } from './scroll.js';
 import './order.js';
@@ -7,6 +7,7 @@ import { view } from "./view.js";
 import { controller } from './controller.js';
 
 // HTML Элементы
+const nav = document.querySelector('.header__navigation');
 const menuButton = document.querySelector('.header__menu');
 
 const themeButton = document.querySelector('.ui-button[data-theme]');
@@ -43,6 +44,10 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
     link.addEventListener('click', (evt) => {
         evt.preventDefault();
+
+        if (nav.classList.contains('header__navigation--opened')) {
+            closeNavigation();
+        }
 
         const linkTitle = evt.target.textContent;
 
